@@ -2,8 +2,8 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on("Bar-code Generator", {
-    refresh(frm) {
-        frm.add_custom_button(__("Get Log Sheet"), function () {
+    get_serial_no(frm) {
+        // frm.add_custom_button(__("Get Log Sheet"), function () {
             frappe.call({
                 method: "barcode.barcode.doctype.bar_code_generator.bar_code_generator.get_serial_no",
                 args: {
@@ -26,7 +26,7 @@ frappe.ui.form.on("Bar-code Generator", {
                     }
                 },
             });
-        });
+        // });
         
 	},
 });
