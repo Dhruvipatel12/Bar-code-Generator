@@ -13,6 +13,7 @@ frappe.ui.form.on("Bar-code Generator", {
                 callback: function (r) {
                     var serialNumbers = r.message;
                     console.log(serialNumbers);
+                    frm.set_value("details",0)
                     if (serialNumbers && serialNumbers.length > 0) {
                         for (var i = 0; i < serialNumbers.length; i++) {
                             var child_create = frm.add_child("details");
@@ -29,4 +30,20 @@ frappe.ui.form.on("Bar-code Generator", {
         // });
         
 	},
+    on_submit:function(frm){
+        frappe.call({
+            method:"barcode.barcode.doctype.bar_code_generator.bar_code_generator.set_status",
+            args:{
+                nm:frm.doc.details
+            }
+        })
+    },
+    after_cancel:function(frm){
+        frappe.call({
+            method:"barcode.barcode.doctype.bar_code_generator.bar_code_generator.set_status_untick",
+            args:{
+                nm:frm.doc.details
+            }
+        })
+    }
 });
