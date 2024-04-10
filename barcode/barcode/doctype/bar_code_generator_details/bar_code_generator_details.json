@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-10 10:50:56.964947",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "column_break_yohd",
+  "serial_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_yohd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Link",
+   "label": "serial No",
+   "options": "Serial No"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "label": "Item Code"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-10 13:49:17.497962",
+ "modified_by": "Administrator",
+ "module": "barcode",
+ "name": "Bar-code Generator Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

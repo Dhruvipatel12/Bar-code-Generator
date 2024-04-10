@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-04-10 11:58:05.006428",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "posting_date",
+  "number_of_barcode",
+  "column_break_qoqr",
+  "item_code",
+  "get_serial_no",
+  "section_break_prjx",
+  "details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Bar-code Generator",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "naming_series",
+   "options": "bar-.item_code.-.####"
+  },
+  {
+   "fieldname": "column_break_qoqr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_prjx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Table",
+   "label": "details",
+   "options": "Bar-code Generator Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Bar-code Generator",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_barcode",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Number Of barcode",
+   "reqd": 1
+  },
+  {
+   "depends_on": "number_of_barcode",
+   "fieldname": "get_serial_no",
+   "fieldtype": "Button",
+   "label": "Get Serial No"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-04-10 17:30:48.570948",
+ "modified_by": "Administrator",
+ "module": "barcode",
+ "name": "Bar-code Generator",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
