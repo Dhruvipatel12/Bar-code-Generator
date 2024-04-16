@@ -1,13 +1,14 @@
 # Copyright (c) 2024, dhruvi and contributors
 # For license information, please see license.txt
 
-import frappe
+# import frappe
 from frappe.model.document import Document
 import json
+import frappe
 
-class BarcodeGenerator(Document):
+class MasterBarcodeGenerator(Document):
 	pass
-@frappe.whitelist()
+
 @frappe.whitelist()
 def get_serial_no(item_code, limit):
     data = frappe.db.sql("""
