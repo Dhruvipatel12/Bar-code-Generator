@@ -10,13 +10,21 @@ frappe.ui.form.on("Master Barcode Generator", {
                 limit: frm.doc.qty
             },
             callback: function (r) {
-                var serialNumbers = r.message;                
-                frm.set_value("master_barcode_details", 0)
-                serialNumbers.forEach(function (obj) {
-                    var child_create = frm.add_child("master_barcode_details");
-                    child_create.serial_no = obj['name'];
-                    child_create.item_name = obj['item_name'];
-                })
+                var serialNumbers = r.message;
+                console.log(serialNumbers.length)
+                if (serialNumbers.length != frm.doc.qty) {
+                    frm.set_value("qty", undefined)
+                    frm.set_value("master_barcode_details", 0)
+                    frappe.msgprint("Requested Serial No: " + frm.doc.qty + ". Available Serial Nos: " + serialNumbers.length + ". Please adjust the requested quantity for generating barcodes accordingly.")
+                }
+                else{
+                    frm.set_value("master_barcode_details", 0)
+                    serialNumbers.forEach(function (obj) {
+                        var child_create = frm.add_child("master_barcode_details");
+                        child_create.serial_no = obj['name'];
+                        child_create.item_name = obj['item_name'];
+                    })
+                }
             },
         });
     },
