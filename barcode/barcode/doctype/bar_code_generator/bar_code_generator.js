@@ -14,8 +14,8 @@ frappe.ui.form.on("Bar-code Generator", {
                 console.log(serialNumbers)
                 if (serialNumbers.length != frm.doc.number_of_barcode) {
                     frm.set_value("details", 0)
-                    frm.set_value("number_of_barcode", undefined)
                     frappe.msgprint("Requested Serial No: " + frm.doc.number_of_barcode + ". Available Serial Nos: " + serialNumbers.length + ". Please adjust the requested quantity for generating barcodes accordingly.")
+                    frm.set_value("number_of_barcode", undefined)
                 }
                 else {
                     frm.set_value("details", 0)

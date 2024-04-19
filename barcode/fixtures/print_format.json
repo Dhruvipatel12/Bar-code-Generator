@@ -18,7 +18,7 @@
   "margin_left": 15.0,
   "margin_right": 15.0,
   "margin_top": 15.0,
-  "modified": "2024-04-12 13:38:44.185996",
+  "modified": "2024-04-19 18:07:20.922512",
   "module": "barcode",
   "name": "Bar-code",
   "page_number": "Hide",
@@ -28,7 +28,7 @@
   "raw_commands": null,
   "raw_printing": 0,
   "show_section_headings": 0,
-  "standard": "No"
+  "standard": "Yes"
  },
  {
   "absolute_value": 0,
@@ -49,7 +49,7 @@
   "margin_left": 15.0,
   "margin_right": 15.0,
   "margin_top": 15.0,
-  "modified": "2024-04-17 18:00:56.584196",
+  "modified": "2024-04-19 18:07:12.921048",
   "module": "barcode",
   "name": "Master Barcode",
   "page_number": "Hide",
@@ -59,6 +59,6 @@
   "raw_commands": null,
   "raw_printing": 0,
   "show_section_headings": 0,
-  "standard": "No"
+  "standard": "Yes"
  }
 ]

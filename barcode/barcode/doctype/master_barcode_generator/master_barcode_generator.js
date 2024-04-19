@@ -13,9 +13,10 @@ frappe.ui.form.on("Master Barcode Generator", {
                 var serialNumbers = r.message;
                 console.log(serialNumbers.length)
                 if (serialNumbers.length != frm.doc.qty) {
-                    frm.set_value("qty", undefined)
+                    
                     frm.set_value("master_barcode_details", 0)
                     frappe.msgprint("Requested Serial No: " + frm.doc.qty + ". Available Serial Nos: " + serialNumbers.length + ". Please adjust the requested quantity for generating barcodes accordingly.")
+                    frm.set_value("qty", undefined)
                 }
                 else{
                     frm.set_value("master_barcode_details", 0)
