@@ -229,4 +229,5 @@ app_license = "mit"
 fixtures = [
     {"dt": "Custom Field", "filters": [["module", "in", ["barcode"]]]},
     {"dt": "Print Format", "filters": [["module", "in", ["barcode"]]]},
+    {"dt": "Workspace", "filters": [["name", "in", ["Barcode-Administrator"]]]},
 ]
