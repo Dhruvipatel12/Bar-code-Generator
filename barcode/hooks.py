@@ -230,4 +230,6 @@ fixtures = [
     {"dt": "Custom Field", "filters": [["module", "in", ["barcode"]]]},
     {"dt": "Print Format", "filters": [["module", "in", ["barcode"]]]},
     {"dt": "Workspace", "filters": [["name", "in", ["Barcode-Administrator"]]]},
+    {"dt": "Number Card", "filters": [["module", "in", ["barcode"]]]},
+    {"dt": "Report", "filters": [["module", "in", ["barcode"]]]},
 ]

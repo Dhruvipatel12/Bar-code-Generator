@@ -43,5 +43,15 @@ frappe.ui.form.on("Bar-code Generator", {
                 nm: frm.doc.details
             }
         })
+    },
+    onload:function(frm){
+        cur_frm.set_query("item_code", function() {
+            return {
+                "filters": {
+                    "has_serial_no": 1,
+                    // "name": ["not in", "Services"],
+                }
+            };
+        });
     }
 });
